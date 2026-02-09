@@ -1,0 +1,11 @@
+* {
+    border: 2 px solid red;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    flex-shrink: 2;
+}
