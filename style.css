@@ -1,11 +1,130 @@
-* {
-    border: 2 px solid red;
+
+body {
+    height:100%;
+    width:auto;
+
 }
 
 .container {
     display: flex;
+    align-items: stretch;   
+}
+
+.main {
+    flex-grow: 2;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: ghostwhite;
+}
+
+.main > * {
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 
 .sidebar {
-    flex-shrink: 2;
+    width:38%;
+    position: relative;
+}
+
+.banner {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    width:100%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); 
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-size: 3em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.sidebar > img {
+    display:block;
+    width: 100%;
+    height: auto;
+    flex-grow:2;
+}
+
+
+form {
+    display:flex;
+    flex-wrap:wrap;
+    background-color: whitesmoke;
+    padding: 2%;
+    box-shadow: 0px 5px 8px 0px #000000;
+}
+
+legend {
+    width:100%;
+    padding-bottom: 2%;
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form div {
+    width:40%;
+}
+
+.info {
+    font-size: 1.5em;
+    padding:2%;
+    font-family: Arial, sans-serif;
+}
+
+.sign-up {
+    padding: 2%;
+    width:25%;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+button {
+    padding: 1em;
+    box-shadow: 2px 2px 7px 1px #000000;
+    width:10em;
+    font-size: 1em;
+    background-color: forestgreen;
+    border-radius: 5px;
+    border: 0px;
+    color: white;
+}
+
+
+input{
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+
+.credit {
+    color:white;
+    padding:0.5em;
+    background-color: rgba(0, 0, 0, 0.5); 
+    position:absolute;
+    bottom: 1%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+input:invalid{
+    border-color: red;
+}
+
+.sign-up a {
+    color:forestgreen;
+}
+
+a {
+    color:white;
+}
+
+label{
+    opacity: 70%;
+    font-size:0.8em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
