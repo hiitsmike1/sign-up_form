@@ -1,6 +1,6 @@
 
 body {
-    height:100%;
+    min-height: 100vh;
     width:auto;
 
 }
@@ -24,7 +24,9 @@ body {
 }
 
 .sidebar {
-    width:38%;
+    width: 29%;
+    min-width:300px;
+    flex-shrink: 0;
     position: relative;
 }
 
@@ -55,7 +57,7 @@ form {
     display:flex;
     flex-wrap:wrap;
     background-color: whitesmoke;
-    padding: 2%;
+    padding: 2em;
     box-shadow: 0px 5px 8px 0px #000000;
 }
 
@@ -78,7 +80,7 @@ legend {
 
 .sign-up {
     padding: 2%;
-    width:25%;
+    max-width: 300px;
     display:flex;
     flex-direction: column;
     text-align: center;
@@ -111,7 +113,7 @@ input{
     transform: translate(-50%, -50%);
 }
 
-input:invalid{
+input:user-invalid:not(:placeholder-shown) {
     border-color: red;
 }
 
@@ -128,3 +130,10 @@ label{
     font-size:0.8em;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+input:focus {
+  outline: none;
+  border-color: forestgreen;
+  box-shadow: 0 0 0 2px rgba(34, 139, 34, 0.2);
+}
+
